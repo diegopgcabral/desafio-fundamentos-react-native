@@ -39,16 +39,6 @@ const CartProvider: React.FC = ({ children }) => {
     loadProducts();
   }, []);
 
-  // useEffect(() => {
-  //   async function saveCartIntoStorage(): Promise<void> {
-  //     await AsyncStorage.setItem(
-  //       '@GoMarketplace:products',
-  //       JSON.stringify([...products]),
-  //     );
-  //   }
-  //   saveCartIntoStorage();
-  // }, [products]);
-
   const increment = useCallback(
     async id => {
       const productIndex = products.findIndex(product => product.id === id);
